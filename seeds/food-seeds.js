@@ -1,6 +1,6 @@
 const Food = require('./Food');// Import the "Food" model
 
-const foodData = [
+const foodData = [  // create an array of objects to seed the database with
     {
         name: 'apple',
         calories: 95,
