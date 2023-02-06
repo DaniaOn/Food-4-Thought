@@ -80,7 +80,18 @@ const foodData = [  // create an array of objects to seed the database with
         name: 'peanut butter',
         calories: 188,
         price: 3.99
-    }
+    },
+    {
+      // Pass the "sequelize" connection object to the model options
+      sequelize,
+      // Disable timestamps for the model
+      timestamps: false,
+      // Freeze the table name to the model name, using underscore syntax
+      freezeTableName: true,
+      underscored: true,
+      // Set the model name as "Food"
+      modelName: 'Food',
+   }
 ]
 
 const seedFood = () => Food.bulkCreate(foodData); // Define seedFood function to seed the database with the "foodData" array
