@@ -1,0 +1,5 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS food4thought_db;
+
+-- CREATE DATABASE
+CREATE DATABASE food4thought_db;
