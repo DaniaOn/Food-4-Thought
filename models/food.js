@@ -25,7 +25,18 @@ Food.init(// Initialize the "Food" model
         type: DataTypes.DECIMAL(5, 2),
         allowNull: false
      }
-    }
+    },
+    {
+      // Pass the "sequelize" connection object to the model options
+      sequelize,
+      // Disable timestamps for the model
+      timestamps: false,
+      // Freeze the table name to the model name, using underscore syntax
+      freezeTableName: true,
+      underscored: true,
+      // Set the model name as "Food"
+      modelName: 'Food',
+   }
 );
 
 module.exports = Food;// Export the "Food" model

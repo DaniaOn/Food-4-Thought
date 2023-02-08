@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const foodroutes = require('/foodroutes.js');
+const foodroutes = require('../controllers/foodroutes');
 
 router.use('/foods', foodroutes);
 
