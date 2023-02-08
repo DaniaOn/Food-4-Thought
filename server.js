@@ -23,7 +23,7 @@ app.set('view engine', 'handlebars');
 // setting up the views folder as a static folder
 app.use(express.static(path.join(__dirname, 'public')));  
 // setting up the food routes as the default route
-app.use(require('./controllers/foodRoutes'));  
+app.use(require('./controllers/foodroutes'));  
 // Using express middleware to parse incoming JSON data
 app.use(express.json());
 // Using express middleware to parse URL encoded data, including data from HTML forms
