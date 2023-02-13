@@ -3,30 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
-<div class="flex justify-center">
-    <img src="/images/F4T.gif" alt="" class="items-center">
-</div>
-<body class="bg-zinc-700 text-white" >
-    
-    <div class="flex justify-center">
-    
-        {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-            <!-- Otherwise, show a link to login -->
-            <a href="/login">Login</a>
-        {{/if}}
-        
-        <section class="flex justify-center border-2 w-1/2">
-            {{{body}}}
-        </section>
-    
+<body class="bg-zinc-700 h-screen w-screen flex flex-col items-center">
+    <div class="flex justify-center h-auto">
+        <img src="/images/F4T.gif" alt="" class="items-center">
     </div>
     
+    <div class="flex flex-col w-2/3">
+		<div class="flex flex-col mx-3 items-center">
+			{{{body}}}
+		</div>
+	</div>
+
 </body>
 </html>
-
