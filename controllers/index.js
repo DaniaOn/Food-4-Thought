@@ -1,9 +1,11 @@
 const router = require('express').Router();
 
-const apiRoutes = require('./api');
-const foodroutes = require('./foodroutes.js');
+const foodroutes = require('./api/foodRoutes.js');
+const loginRoutes = require('./loginRoutes.js');
+// const userRoutes = require('./userRoutes.js');
 
-router.use('/', foodroutes);
-router.use('/api', apiRoutes);
+// router.use('/', foodroutes);
+router.use('/login', loginRoutes);
+// router.use('/user', userRoutes);
 
 module.exports = router;

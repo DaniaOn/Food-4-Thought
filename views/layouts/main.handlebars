@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-<img src="/images/F4T.gif" alt="">
-<body class="bg-gray-700 text-white" >
-{{{body}}}
+<div class="flex justify-center">
+    <img src="/images/F4T.gif" alt="" class="items-center">
+</div>
+<body class="bg-zinc-700 text-white" >
+    
+    <div class="flex justify-center">
+    
+        {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+            <!-- Otherwise, show a link to login -->
+            <a href="/login">Login</a>
+        {{/if}}
+        
+        <section class="flex justify-center border-2 w-1/2">
+            {{{body}}}
+        </section>
+    
+    </div>
+    
 </body>
 </html>
 
