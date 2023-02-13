@@ -1,42 +1,54 @@
-const { Model, DataTypes } = require('sequelize');// Import the "Model" and "DataTypes" classes from the "sequelize" package
-const sequelize = require('../config/connection.js');// Import the "sequelize" connection object from the connection configuration file
-class Food extends Model {}// Define a new "Food" model class that extends the "Model" class
+const { Model, DataTypes } = require('sequelize');// import the Model and DataTypes objects from the sequelize package
+const sequelize = require('../config/connection');// import the sequelize connection from the config folder
 
-Food.init(// Initialize the "Food" model
-    {
-        // Define the "id" attribute as an integer, with a primary key and auto-increment enabled
-      id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-     },
-     // Define the "name" attribute as a string, not allowing null values
-     name: {
-        type: DataTypes.STRING,
-        allowNull: false
-     },
-     // Define the "calories" attribute as text, not allowing null values
-     calories: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-     },
-     // Define the "price" attribute as text, not allowing null values
-     price: {
-        type: DataTypes.DECIMAL(5, 2),
-        allowNull: false
-     }
-    },
-    {
-      // Pass the "sequelize" connection object to the model options
-      sequelize,
-      // Disable timestamps for the model
-      timestamps: false,
-      // Freeze the table name to the model name, using underscore syntax
-      freezeTableName: true,
-      underscored: true,
-      // Set the model name as "Food"
-      modelName: 'Food',
-   }
+class Food extends Model { }// create the Food model by extending the Model class from sequelize package
+
+Food.init(// initialize the Food model by calling the init() method on the Food class
+	{
+		id: {// define the id column with the following properties
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			primaryKey: true,
+			autoIncrement: true,
+		},
+		name: {// define the name column with the following properties
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		calories: {// define the calories column with the following properties
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
+		protein: {// define the protein column with the following properties
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
+		fat: {// define the fat column with the following properties
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
+		carbs: {// define the carbs column with the following properties
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
+		image: {// define the image column with the following properties
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		categoryId: {
+			type: DataTypes.INTEGER,
+			references: {
+			  model: 'category',
+			  key: 'id',
+			},
+		},
+	},
+	{// define the configuration options for the Food model
+		sequelize,
+		freezeTableName: true,
+		underscored: false,
+		modelName: 'food',
+	}
 );
 
-module.exports = Food;// Export the "Food" model
+module.exports = Food;// export the Food model to be used in other parts of the application
