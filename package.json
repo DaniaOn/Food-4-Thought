@@ -4,10 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "seed": "node seeds/index.js",
-    "tailwind": "npx tailwindcss -i input.css -o ./public/css/style.css --watch",
-    "main": "server.js"
+    "tailwind": "npx tailwindcss -i input.css -o ./public/css/style.css --watch"
   },
   "author": "",
   "license": "ISC",
