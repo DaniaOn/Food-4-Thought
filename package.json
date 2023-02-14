@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server.js",
     "seed": "node seeds/index.js",
-    "tailwind": "npx tailwindcss -i input.css -o ./public/css/style.css --watch"
+    "tailwind": "npx tailwindcss -i input.css -o ./public/css/style.css --watch",
+    "main": "server.js"
   },
   "author": "",
   "license": "ISC",
