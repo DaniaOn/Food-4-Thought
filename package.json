@@ -1,5 +1,5 @@
 {
-  "name": "museum-paintings",
+  "name": "f4t",
   "version": "1.0.1",
   "description": "",
   "main": "server.js",
@@ -24,5 +24,8 @@
   "devDependencies": {
     "nodemon": "^2.0.7",
     "tailwind": "^4.0.0"
+  },
+  "engines": {
+    "node": "18.14.0"
   }
 }
