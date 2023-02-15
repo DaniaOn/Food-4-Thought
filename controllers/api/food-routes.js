@@ -11,14 +11,14 @@ router.get('/', async (req, res) => {// Use the get() method to create a GET rou
 				},
 			],
 		});
-		const foods = dbFoodData.map((food) =>// Use the map() method to iterate over the dbFoodData array and return a new array with the data from each Food object
-			food.get({ plain: true })// Use the get() method to get the data from the Food object and store it in the plain object (plain: true) and return it to the foods array
-		);
+		// Use the map() method to iterate over the dbFoodData array and return a new array with the data from each Food object
+		// Use the get() method to get the data from the Food object and store it in the plain object (plain: true) and return it to the foods array
+		const foods = dbFoodData.map((food) => food.get({ plain: true }));
 		req.session.save(() => {// Use the save() method to save the session data to the database
 			if (req.session.countVisit) {
-				req.session.countVisit++ // If the countVisit property exists, increment it by 1
+				req.session.countVisit++; // If the countVisit property exists, increment it by 1
 			} else {
-				req.session.countVisit = 1 // If the countVisit property does not exist, set it to 1
+				req.session.countVisit = 1; // If the countVisit property does not exist, set it to 1
 			}
 			res.render('allFood', { // Use the render() method to render the homepage handlebar
 			foods, // Pass in the foods variable
