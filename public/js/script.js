@@ -11,7 +11,7 @@ function navigateToPrevFood() {// navigate to the previous food function
     if (previousFoodId < minFoodId) {// if the previous food id is less than the min food id
         previousFoodId = maxFoodId;// set the previous food id to the max food id so it loops back to the last food
     }
-    location.href = `/food/${previousFoodId}`;// navigate to the previous food using the previous food id in the url
+    location.href = `/api/food/${previousFoodId}`;// navigate to the previous food using the previous food id in the url
 }
 
 function navigateToNextFood() {// navigate to the next food function
@@ -19,11 +19,11 @@ function navigateToNextFood() {// navigate to the next food function
     if (nextFoodId > maxFoodId) {// if the next food id is greater than the max food id
         nextFoodId = minFoodId;// set the next food id to the min food id so it loops back to the first food
     }
-    location.href = `/food/${nextFoodId}`;// navigate to the next food using the next food id in the url
+    location.href = `/api/food/${nextFoodId}`;// navigate to the next food using the next food id in the url
 }
 
 function navigateToFoodList() {// navigate to the food list function
-  location.href = `/food`;// navigate to the food list using the food root url
+  location.href = `/api/food`;// navigate to the food list using the food root url
 }
 
 prevFoodButton.addEventListener("click", navigateToPrevFood);// add event listeners to the prevFood button

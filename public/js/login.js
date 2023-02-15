@@ -9,7 +9,7 @@ const loginFormHandler = async (event) => {// This is the login form handler
 			headers: { "Content-Type": "application/json" },// This sets the content type to JSON 
 		});
 		if (response.ok) {// If the response is ok
-			document.location.replace("/food");// This redirects the user to the homepage
+			document.location.replace("/api/food");// This redirects the user to the homepage
 		} else {
 			alert("Failed to log in.");
 		}
@@ -28,7 +28,7 @@ const signupFormHandler = async (event) => {// This is the signup form handler
 			headers: { "Content-Type": "application/json" },// This sets the content type to JSON 
 		});
 		if (response.ok) {// If the response is ok
-			document.location.replace("/food");// This redirects the user to the homepage
+			document.location.replace("/api/food");// This redirects the user to the homepage
 		} else {
 			alert("Failed to sign up.");
 		}
