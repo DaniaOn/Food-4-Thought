@@ -1,11 +1,12 @@
 {
-  "name": "f4t",
+  "name": "f4t_db",
   "version": "1.0.1",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "seed": "node seeds/index.js",
+    "dev": "nodemon server.js",
     "tailwind": "npx tailwindcss -i input.css -o ./public/css/style.css --watch"
   },
   "author": "",
