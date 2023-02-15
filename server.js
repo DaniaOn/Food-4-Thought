@@ -12,7 +12,7 @@ const hbs = exphbs.create({ helpers });// Create a new instance of the express-h
 const sess = {// Create a new session object to be used by express-session 
 	secret: 'Super secret secret',// The secret is used to sign the session ID cookie. This can be anything you want
 	resave: false,// The resave property forces the session to be saved back to the session store, even if the session was never modified during the request
-	saveUninitialized: true,// The saveUninitialized property forces a session that is "uninitialized" to be saved to the store. A session is uninitialized when it is new but not modified
+	saveUninitialized: true,// The saveUninitialized property forces a session that is 'uninitialized' to be saved to the store. A session is uninitialized when it is new but not modified
 	store: new SequelizeStore({// The store property tells express-session to use the SequelizeStore object we created earlier
 		db: sequelize,// The db property tells SequelizeStore to use the sequelize connection we created earlier
 	}),
