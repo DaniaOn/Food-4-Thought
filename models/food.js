@@ -43,7 +43,7 @@ Food.init(// initialize the Food model by calling the init() method on the Food 
 			},
 		},
 	},
-	{// define the configuration options for the Food model
+	{
 		sequelize,
 		freezeTableName: true,
 		underscored: false,
@@ -51,4 +51,4 @@ Food.init(// initialize the Food model by calling the init() method on the Food 
 	}
 );
 
-module.exports = Food;// export the Food model to be used in other parts of the application
+module.exports = Food;
