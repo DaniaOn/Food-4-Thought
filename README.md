@@ -4,6 +4,15 @@
 
 "Welcome to our food website! We are dedicated to providing you with the most delicious and nutritious food options. Our inventory is carefully curated to include only the best and healthiest foods. To make it easier for you to make informed choices, we've included detailed nutritional information for every item in our inventory. Whether you're counting calories, watching your sodium intake, or following a specific diet, our nutritional information makes it simple to find the foods that are right for you. So, take a look around, find your favorite dishes, and enjoy a healthier and tastier life with us!"
 
+## Table of Contents
+- [Installation](#installation)
+- [Mock-up](#mock-up)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
+<br>
+
 ## Installation
 
 For installation, everything has to get done in your terminal. First, we have to "npm i" which will install all the required NPM packages, next you have to login into MySql using "MySQL -u root -p" and SOURCE the database using "SOURCE db/schema.sql;". Then create your ".env file" and run "npm run seed" to put a fake database. Lastly, quit MySQL and run "npm run start" to see it online after that you should be able to visit the localhost.
@@ -18,14 +27,38 @@ The following image shows the our web application's appearance and functionality
 
 To use Food-4-Thought, Open the page link [F4T](https://f4t-db.herokuapp.com/), First, you must log in or Sign Up to view the market for our website. you can click on the several interactive buttons on the page where you can select food options and be presented with the selected food category, calories, protein, fat, and carbos.
 
-## Credits
+## Technologies
+NPM - https://www.npmjs.com/ (for research and documentation referencing)
+<br>
+MYSQL2 NPM package - https://www.npmjs.com/package/mysql2 (for research and documentation referencing)
+<br>
+DOTENV NPM package - https://www.npmjs.com/package/dotenv (for research and documentation referencing)
+<br>
+BCRYPT NPM package - https://www.npmjs.com/package/bcrypt (for research and documentation referencing)
+<br>
+CONNECT SESSION SEQUELIZE NPM package - https://www.npmjs.com/package/connect-session-sequelize (for research and documentation referencing)
+<br>
+EXPRESS NPM package - https://www.npmjs.com/package/express (for research and documentation referencing)
+<br>
+EXPRESS-HANDLEBARS NPM package - https://www.npmjs.com/package/express-handlebars (for research and documentation referencing)
+<br>
+EXPRESS-SESSION NPM package - https://www.npmjs.com/package/express-session (for research and documentation referencing)
+<br>
+MYSQL2 NPM package - https://www.npmjs.com/package/mysql2 (for research and documentation referencing)
+<br>
+SEQUELIZE NPM package - https://www.npmjs.com/package/sequelize (for research and documentation referencing)
+<br>
 
-N/A
+## Contributing
+Callie Baliles @ https://github.com/CalCar0707 <br>
+Danica On @ https://github.com/DaniaOn <br>
+James Russell @ https://github.com/eugerald <br>
+James Kelly @ https://github.com/jk377y <br>
 
 ## License
 
-MIT License
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<br>
 Copyright (c) 2023 DaniaOn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
